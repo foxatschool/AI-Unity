@@ -11,7 +11,7 @@ public class DistancePerception : Perception
         List<GameObject> result = new List<GameObject>();
 
         // get all colliders inside sphere
-        var colliders = Physics.OverlapSphere(transform.position, maxDistance);
+        var colliders = Physics.OverlapSphere(transform.position, maxDistance, layerMask);
         foreach (var collider in colliders)
         {
             // do not include ourselves

@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 3574544289930690110}
   - component: {fileID: 1137699077079590434}
   - component: {fileID: 992678727337226819}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AIAgent 02
-  m_TagString: Agent 02
+  m_TagString: Agent02
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,6 +53,11 @@ MonoBehaviour:
   movement: {fileID: 22699037861631166}
   fleePerception: {fileID: 3854581452950448817}
   seekPerception: {fileID: 0}
+  flockPerception: {fileID: 0}
+  wanderRadius: 1
+  wanderDistance: 1
+  wanderDisplacement: 10
+  separationWeight: 1.5
 --- !u!114 &22699037861631166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DistancePerception
   info: Flee
-  tagName: Agent 01
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  tagName: Agent01
   maxDistance: 5
   viewAngle: 180
 --- !u!33 &3574544289930690110
@@ -169,6 +177,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3196031531253689543}
     m_Modifications:
+    - target: {fileID: 103887197151247430, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 125411175701241048, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 644027910916855787, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -209,9 +225,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 866827337798108977, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960047954914318358, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432744989582375459, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833212277593823945, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887247566566881369, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002274797990947508, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308969104878775348, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609690123510642517, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631968708859882183, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424063617243297502, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4950779065795438720, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
       propertyPath: m_Name
       value: Muskrat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950779065795438720, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460354150513945985, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889436414149198228, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735221046294246625, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
